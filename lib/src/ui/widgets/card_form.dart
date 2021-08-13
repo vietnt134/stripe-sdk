@@ -14,6 +14,7 @@ class CardForm extends StatefulWidget {
       {Key key,
       formKey,
       card,
+      this.enablePostcodeField = false,
       this.cardNumberDecoration,
       this.cardNumberTextStyle,
       this.cardExpiryDecoration,
@@ -48,6 +49,7 @@ class CardForm extends StatefulWidget {
   final String cardExpiryErrorText;
   final String cardCvcErrorText;
   final Decoration cardDecoration;
+  final bool enablePostcodeField;
 
   @override
   State createState() => _CardFormState();
@@ -131,7 +133,7 @@ class _CardFormState extends State<CardForm> {
                     ),
                   ),
                 ),
-                Container(
+                if(enablePostcodeField) Container(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   margin: const EdgeInsets.only(top: 8),
                   child: TextFormField(
