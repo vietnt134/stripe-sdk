@@ -133,7 +133,7 @@ class _CardFormState extends State<CardForm> {
                     ),
                   ),
                 ),
-                if(enablePostcodeField) Container(
+                if(widget.enablePostcodeField) Container(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   margin: const EdgeInsets.only(top: 8),
                   child: TextFormField(
